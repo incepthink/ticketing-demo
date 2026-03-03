@@ -354,7 +354,7 @@ const App: React.FC = () => {
 
   if (isProfileLoading) {
     return (
-      <div className="min-h-screen  flex items-center justify-center text-white">
+      <div className=" flex items-center justify-center text-white">
         <div className="flex flex-col items-center">
           <div className="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin mb-4"></div>
           <h2 className="text-xl font-semibold">Loading Profile</h2>
@@ -364,7 +364,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="relative  text-white pb-10 pt-20">
+    <div className="relative  text-white pb-10 pt-10">
       {/* Banner Image Background */}
       {/* <div className="relative w-full h-[200px]">
         <Image
