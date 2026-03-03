@@ -15,7 +15,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sui Hashcase",
+  title: "Hashcase Events Demo",
   description:
     "HashCase infra uses real assets and gamification to achieve user retention.",
   metadataBase: new URL("https://sui.hashcase.co/"),

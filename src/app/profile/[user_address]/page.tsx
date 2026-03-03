@@ -235,7 +235,9 @@ const App: React.FC = () => {
       localStorage.getItem("registered_events") || "[]",
     );
     const effectiveAddress = userWalletAddress || userAddress;
-    setRegisteredEvents(all.filter((e) => e.walletAddress === effectiveAddress));
+    setRegisteredEvents(
+      all.filter((e) => e.walletAddress === effectiveAddress),
+    );
   }, [userAddress]);
 
   const processedClaimedNFTs = claimedNFTs?.map((nft) => {
@@ -362,7 +364,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="relative  text-white pb-10">
+    <div className="relative  text-white pb-10 pt-20">
       {/* Banner Image Background */}
       {/* <div className="relative w-full h-[200px]">
         <Image
@@ -380,7 +382,7 @@ const App: React.FC = () => {
 
       {/* Profile Section */}
       {currentAccount || zkloginaddress ? (
-        <div className="relative z-20 flex flex-col items-center mt-8">
+        <div className="relative z-20 flex flex-col items-center pt-8">
           <div className="w-32 h-32 rounded-full border-4 border-white overflow-hidden bg-white z-20">
             <Image
               src={
@@ -447,7 +449,7 @@ const App: React.FC = () => {
 
           <div className="text-center mt-4">
             <h2 className="text-xl font-semibold">{userData.username}</h2>
-            <p className="text-purple-400 text-sm">{userData.description}</p>
+            {/* <p className="text-purple-400 text-sm">{userData.description}</p> */}
             <p className="text-white/60 text-sm mt-2">Public Profile</p>
           </div>
 
