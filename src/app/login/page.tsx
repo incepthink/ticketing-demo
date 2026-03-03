@@ -23,7 +23,7 @@ export default function AuthPage() {
   }, [handled]);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-[#00041F]">
+    <div className="flex justify-center items-center h-screen">
       <Loader2 className="animate-spin h-16 w-16 text-white" />
     </div>
   );
