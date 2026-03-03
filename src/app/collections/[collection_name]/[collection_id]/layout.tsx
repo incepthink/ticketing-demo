@@ -88,6 +88,26 @@ export default function CollectionLayout({ children }: CollectionLayoutProps) {
     }
   };
 
+  const renderDescriptionWithLinks = (text: string) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+    return parts.map((part, i) =>
+      urlRegex.test(part) ? (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 underline hover:text-blue-300"
+        >
+          {part}
+        </a>
+      ) : (
+        <span key={i}>{part}</span>
+      )
+    );
+  };
+
   const tabs = [
     {
       id: "points",
@@ -174,10 +194,10 @@ export default function CollectionLayout({ children }: CollectionLayoutProps) {
           </div>
           <h1 className="text-white text-4xl font-bold">{collection.name}</h1>
           <div className="flex flex-col items-center">
-            <p className="text-white">{collection.description}</p>
+            <p className="text-white">{renderDescriptionWithLinks(collection.description)}</p>
             <button
               onClick={handleRegister}
-              disabled={isRegistered}
+              disabled={isRegistered || !walletAddress}
               className="self-center bg-violet-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-2xl font-semibold text-white px-6 mt-4 py-2 rounded-full"
             >
               {isRegistered ? "Registered" : "Register"}
