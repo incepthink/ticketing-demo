@@ -17,7 +17,7 @@ export default function AuthPage() {
         window.location.href = storedRedirectUrl;
       } else {
         // Default redirect to home page
-        // window.location.href = "/";
+        window.location.href = "/";
       }
     }
   }, [handled]);
