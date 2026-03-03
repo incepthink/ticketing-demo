@@ -41,7 +41,7 @@ const CollectionsPage: React.FC = () => {
       <div className="min-h-screen  flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-[#4DA2FF] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white/80">Loading collections...</p>
+          <p className="text-white/80">Loading Events...</p>
         </div>
       </div>
     );
